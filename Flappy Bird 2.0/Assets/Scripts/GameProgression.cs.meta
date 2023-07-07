@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a6eb4097203f4ef47ad4a7ad106a7d74
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PipeSpawnerObject: {instanceID: 0}
+  - bottompipe: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
