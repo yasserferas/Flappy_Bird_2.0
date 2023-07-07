@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1600490475}
-  Jump_Force: 25
+  Jump_Force: 30
   Bird_Is_Alive: 0
   Falling_Rotation_Speed: 25
   gp: {fileID: 681150481}
@@ -810,7 +810,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 12
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
