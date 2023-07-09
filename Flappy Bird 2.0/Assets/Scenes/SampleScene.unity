@@ -291,6 +291,7 @@ MonoBehaviour:
   RandomPipeArray:
   - {fileID: 4116553365880628815, guid: 3fc24a95a29033b46a307159e21c4ac0, type: 3}
   - {fileID: 4468649967237734911, guid: 4459468343576c343bd70542d4b4e8e7, type: 3}
+  - {fileID: 4116553365880628815, guid: 3fc24a95a29033b46a307159e21c4ac0, type: 3}
   heightoffset: 6.5
   lowestpoint: 0
   highestpoint: 0
