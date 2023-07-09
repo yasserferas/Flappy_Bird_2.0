@@ -16,7 +16,7 @@ public class PipeMovement : MonoBehaviour
 
         if (transform.position.x <= deadzone_position)
         {
-            Destroy(gameObject);                               //if pipe reach deazone then destroy the pipe (this is made to free up memory)
+            Destroy(gameObject);                               //if pipe reach deadzone then destroy the pipe (this is made to free up memory)
         }
     }
 }

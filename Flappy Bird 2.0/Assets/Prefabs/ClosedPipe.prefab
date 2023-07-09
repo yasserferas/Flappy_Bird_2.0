@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BottomPipe: {fileID: 6910236189838760730}
-  HeightOffset: 5
+  BottomPipeTransform: {fileID: 8140122045279086411}
 --- !u!1 &4468649967237734911
 GameObject:
   m_ObjectHideFlags: 0

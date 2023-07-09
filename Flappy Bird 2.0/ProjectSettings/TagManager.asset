@@ -11,6 +11,8 @@ TagManager:
   - Deadzone wall
   - Audio Manager
   - Button
+  - Projectile
+  - Egg
   layers:
   - Default
   - TransparentFX

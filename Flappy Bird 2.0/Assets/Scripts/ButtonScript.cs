@@ -21,4 +21,16 @@ public class ButtonScript : MonoBehaviour
     {
         
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Projectile"))
+        {
+            BottomPipe.transform.position = new Vector3(BottomPipe.transform.position.x, BottomPipe.transform.position.y - 30, BottomPipe.transform.position.z);
+
+            Debug.Log("heyy");
+            Destroy(collision);
+        }
+    }
 }
