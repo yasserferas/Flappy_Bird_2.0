@@ -31,7 +31,7 @@ public class GameProgression : MonoBehaviour
         }
 
 
-        bottom_pipe_transform = pss.instantiatedobject.transform.Find("Bottom pipe"); //we set the bottompipetransform to the bottompipe which is a child of the instantiated object we found the child of the instantiated object by using transform.find and then typing what gameobject we wanna find
+        bottom_pipe_transform = pss.instantiatedobject.transform.Find("Bottom pipe open"); //we set the bottompipetransform to the bottompipe which is a child of the instantiated object we found the child of the instantiated object by using transform.find and then typing what gameobject we wanna find
 
         if (bottom_pipe_transform != null && timer >= 45) 
        {

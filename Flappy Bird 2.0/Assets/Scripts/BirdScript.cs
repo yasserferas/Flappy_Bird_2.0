@@ -86,7 +86,7 @@ public class BirdScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Pipe") && Bird_Is_Alive == true)
+        if (collision.gameObject.CompareTag("Pipe") && Bird_Is_Alive == true || collision.gameObject.CompareTag("Button") && Bird_Is_Alive == true)
         {
             Bird_Is_Alive = false;
 

@@ -6,6 +6,12 @@ public class PipeSpawnerScript : MonoBehaviour
 {
     public GameObject pipe; //reference for the pipe prefab
 
+    public GameObject ClosedPipe;
+
+    public GameObject[] RandomPipeArray;
+
+    private int RandomIndex;
+
     private float timer; //timer that counts up by time.deltatime
 
     public float heightoffset; // how many units it can go off the spawner
@@ -23,7 +29,8 @@ public class PipeSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-      
+        
+       
         SpawnPipe();  // spwan pipe as soon as the game starts
 
     }
@@ -31,6 +38,9 @@ public class PipeSpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RandomIndex = Random.Range(0, RandomPipeArray.Length);
+
+
         if (timer < Spawnrate)
         {
             timer = timer + Time.deltaTime;   //if the timer is less than the spawn rate then we increase it to make it the same as spawn rate
@@ -49,6 +59,8 @@ public class PipeSpawnerScript : MonoBehaviour
 
         highestpoint = transform.position.y + heightoffset; // set value for highest point where a pipe can spawn here we add instead of minus 
 
-        instantiatedobject = Instantiate(pipe, new Vector3(transform.position.x , Random.Range(lowestpoint, highestpoint), transform.position.z), transform.rotation); // creates pipe in a random range between the lowest point and the highest point in the same rotation as the spawner also instantiated object variable will be set to every instantiated pipe
+        instantiatedobject = Instantiate(RandomPipeArray[RandomIndex] , new Vector3(transform.position.x , Random.Range(lowestpoint, highestpoint), transform.position.z), transform.rotation); // creates pipe in a random range between the lowest point and the highest point in the same rotation as the spawner also instantiated object variable will be set to every instantiated pipe
+
+        
     }
 }
