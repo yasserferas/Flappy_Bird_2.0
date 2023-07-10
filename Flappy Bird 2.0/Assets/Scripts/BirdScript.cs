@@ -44,7 +44,7 @@ public class BirdScript : MonoBehaviour
 
             Falling = true;
 
-            transform.rotation = Quaternion.Euler(0f, 0f, 20f);
+            transform.rotation = Quaternion.Euler(0f, 0f, 25f);
 
             FindObjectOfType<AudioManager>().Play("Jump");
 
@@ -87,7 +87,7 @@ public class BirdScript : MonoBehaviour
 
    void Rotate_Down()
     {
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, -20f), Falling_Rotation_Speed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, -25f), Falling_Rotation_Speed * Time.deltaTime);
   }
 
 

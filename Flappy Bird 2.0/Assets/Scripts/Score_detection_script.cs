@@ -8,6 +8,8 @@ public class Score_detection_script : MonoBehaviour
 
     public BirdScript bs;
 
+    private bool CanScore;
+
    
 
     // Start is called before the first frame update
@@ -16,6 +18,8 @@ public class Score_detection_script : MonoBehaviour
         sm = GameObject.FindGameObjectWithTag("Logic manager").GetComponent<ScoreManager>();
 
         bs = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
+
+        CanScore = true;
 
         
     }
@@ -29,10 +33,11 @@ public class Score_detection_script : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Bird") && bs.Bird_Is_Alive == true)
+        if (collision.CompareTag("Bird") && bs.Bird_Is_Alive == true && CanScore == true)
         {
             sm.add_score(1);
             FindObjectOfType<AudioManager>().Play("Score");
+            CanScore = false;
         }
     }
 

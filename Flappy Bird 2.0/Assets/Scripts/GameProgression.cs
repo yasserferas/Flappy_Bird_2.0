@@ -10,7 +10,7 @@ public class GameProgression : MonoBehaviour
 
       public float timer; // timer that goes up by time.deltatime used to make the game harder as the player progreses through it
 
-    public ButtonScript bs;
+      public ButtonScript bs;
 
       
 
@@ -61,12 +61,15 @@ public class GameProgression : MonoBehaviour
 
         }
 
-        bs = pss.instantiatedobject.transform.Find("Button").GetComponent<ButtonScript>();
+        bs = pss.instantiatedobject.GetComponentInChildren<ButtonScript>();
 
-        if (timer >= 70)
+        if (timer >= 70 &&  bs != null)
         {
-
             bs.OpeningLength = 10f;
         }
+
+
+
+        
     }
 }
