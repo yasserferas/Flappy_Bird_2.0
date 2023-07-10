@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efd0da843d539c48b72942506b1e9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 10
-  Bird: {fileID: 6672239246655079346, guid: ccc958db845121a4a99979762b3e8dee, type: 3}
+  ProjectileSpeed: 5
+  ProjectileLifetime: 4
 --- !u!50 &-6133809192620984241
 Rigidbody2D:
   serializedVersion: 4
@@ -244,7 +244,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

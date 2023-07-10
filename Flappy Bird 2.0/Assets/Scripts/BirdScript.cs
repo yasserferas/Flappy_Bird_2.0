@@ -22,7 +22,9 @@ public class BirdScript : MonoBehaviour
 
     private bool Death_Sound_Played;
 
-    
+    public GameObject Egg;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,13 @@ public class BirdScript : MonoBehaviour
             }
 
         }
+
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(Egg, transform.position, transform.rotation);
+        }
     }
 
 
@@ -107,7 +116,7 @@ public class BirdScript : MonoBehaviour
     }
 
 
-
+    
 
 
 

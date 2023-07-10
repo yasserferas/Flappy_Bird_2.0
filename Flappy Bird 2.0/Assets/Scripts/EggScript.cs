@@ -6,7 +6,9 @@ public class EggScript : MonoBehaviour
 {
     public float ProjectileSpeed;
 
-    public GameObject Bird;
+    public float ProjectileLifetime;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +20,11 @@ public class EggScript : MonoBehaviour
     {
         
         
-       transform.position = transform.position + new Vector3(5 * Time.deltaTime, 0,0);
+       transform.position = transform.position + new Vector3(ProjectileSpeed * Time.deltaTime, 0,0);
 
         transform.rotation = Quaternion.Euler(0, 0, -90); 
 
-            Destroy(gameObject, 4f);
+            Destroy(gameObject, ProjectileLifetime);
 
 
 
@@ -32,11 +34,5 @@ public class EggScript : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Pipe"))
-        {
-            
-        }
-    }
+    
 }
