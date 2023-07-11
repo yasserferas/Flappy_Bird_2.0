@@ -227,8 +227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efd0da843d539c48b72942506b1e9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 5
-  ProjectileLifetime: 4
+  ProjectileSpeed: 6
+  ProjectileLifetime: 3
+  rb: {fileID: -6133809192620984241}
 --- !u!50 &-6133809192620984241
 Rigidbody2D:
   serializedVersion: 4
@@ -255,4 +256,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6

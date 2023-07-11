@@ -8,30 +8,14 @@ public class EggScript : MonoBehaviour
 
     public float ProjectileLifetime;
 
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D rb;
 
     // Update is called once per frame
     void Update()
     {
-        
-        
-       transform.position = transform.position + new Vector3(ProjectileSpeed * Time.deltaTime, 0,0);
+        rb.velocity = new Vector2(ProjectileSpeed, transform.position.y);
 
-        transform.rotation = Quaternion.Euler(0, 0, -90); 
-
-            Destroy(gameObject, ProjectileLifetime);
-
-
-
-
-
-
-
+        Destroy(gameObject, ProjectileLifetime);
     }
 
     

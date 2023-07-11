@@ -39,17 +39,13 @@ public class GameProgression : MonoBehaviour
         if (bottom_pipe_transform != null && timer >= 45) 
        {
             bottom_pipe_transform.localPosition = new Vector3(0, -31 , 0);                    //if there is a bottom pipe and timer reached 50 then change the local position (local position is used to change the position of an object relative to its parent) to -31 on the y axis to make the distance between the bottom pipe and top pipe shorter therefore game will be harder
-
-           
-
-            
        }
 
 
 
         if (timer >= 55)
         {
-            pss.RandomPipeArray = new GameObject[4];
+            pss.RandomPipeArray = new GameObject[5];
 
             pss.RandomPipeArray[0] = pss.pipe;
 
@@ -59,13 +55,16 @@ public class GameProgression : MonoBehaviour
 
             pss.RandomPipeArray[3] = pss.ClosedPipe;
 
+            pss.RandomPipeArray[4] = pss.ClosedPipe;
+
+
         }
 
         bs = pss.instantiatedobject.GetComponentInChildren<ButtonScript>();
 
         if (timer >= 70 &&  bs != null)
         {
-            bs.OpeningLength = 10f;
+            bs.OpeningLength = -37f;
         }
 
 

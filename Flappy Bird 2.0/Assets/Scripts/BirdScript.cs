@@ -16,7 +16,7 @@ public class BirdScript : MonoBehaviour
 
     public GameProgression gp;
 
-   public PipeSpawnerScript pss;
+    public PipeSpawnerScript pss;
 
     public GameObject Game_Over_Screen;
 
@@ -24,13 +24,16 @@ public class BirdScript : MonoBehaviour
 
     public GameObject Egg;
 
+    private bool CanShoot;
 
     // Start is called before the first frame update
     void Start()
     {
-        Bird_Is_Alive = true;
+        Bird_Is_Alive = true; 
 
         Death_Sound_Played = false;
+
+        CanShoot = false;
     }
 
     // Update is called once per frame
@@ -44,19 +47,21 @@ public class BirdScript : MonoBehaviour
 
             Falling = true;
 
-            transform.rotation = Quaternion.Euler(0f, 0f, 25f);
+            transform.rotation = Quaternion.Euler(0f, 0f, 23f);
 
             FindObjectOfType<AudioManager>().Play("Jump");
 
             gp.enabled = true;
 
             pss.enabled = true;
+
+            CanShoot = true;
         }
 
 
         if (Falling == true)
         {
-          Rotate_Down();
+            Rotate_Down();
         }
 
 
@@ -78,17 +83,26 @@ public class BirdScript : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && CanShoot == true)
         {
-            Instantiate(Egg, transform.position, transform.rotation);
+            Shoot();
         }
     }
+    
 
 
-   void Rotate_Down()
+
+    void Shoot()
     {
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, -25f), Falling_Rotation_Speed * Time.deltaTime);
-  }
+        Instantiate(Egg, transform.position, Egg.transform.rotation);
+    }
+    
+
+
+    void Rotate_Down()
+    {
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, -23f), Falling_Rotation_Speed * Time.deltaTime);
+    }
 
 
 

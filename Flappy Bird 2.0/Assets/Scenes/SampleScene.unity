@@ -292,7 +292,7 @@ MonoBehaviour:
   - {fileID: 4116553365880628815, guid: 3fc24a95a29033b46a307159e21c4ac0, type: 3}
   - {fileID: 4468649967237734911, guid: 4459468343576c343bd70542d4b4e8e7, type: 3}
   - {fileID: 4116553365880628815, guid: 3fc24a95a29033b46a307159e21c4ac0, type: 3}
-  heightoffset: 6.5
+  heightoffset: 7
   lowestpoint: 0
   highestpoint: 0
   Spawnrate: 4
@@ -717,7 +717,7 @@ MonoBehaviour:
   rb: {fileID: 1032834530}
   Jump_Force: 30
   Bird_Is_Alive: 0
-  Falling_Rotation_Speed: 25
+  Falling_Rotation_Speed: 35
   gp: {fileID: 681150481}
   pss: {fileID: 253187442}
   Game_Over_Screen: {fileID: 2058468103}
@@ -890,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032834526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3, y: 0, z: 0}
+  m_LocalPosition: {x: -5.7, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
