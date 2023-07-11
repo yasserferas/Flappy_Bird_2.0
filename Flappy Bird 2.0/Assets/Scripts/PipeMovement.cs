@@ -14,9 +14,9 @@ public class PipeMovement : MonoBehaviour
     {
         transform.position = transform.position + new Vector3(-pipespeed * Time.deltaTime, 0, 0); //we add to the original pipeposition a new vector 3 with -pipespped ( - cuz we the pipe will go left) on the x axis and time.deltatime is for it to run the same on differnt frame rates no matter the device
 
-        if (transform.position.x <= deadzone_position)
-        {
-            Destroy(gameObject);                               //if pipe reach deadzone then destroy the pipe (this is made to free up memory)
-        }
+        //if (transform.position.x <= deadzone_position)
+       // {
+          //  Destroy(gameObject);                               //if pipe reach deadzone then destroy the pipe (this is made to free up memory)
+       // }
     }
 }
