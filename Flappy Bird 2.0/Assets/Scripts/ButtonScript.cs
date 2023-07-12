@@ -26,15 +26,14 @@ public class ButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BottomPipe.transform.position.y < OpeningLength)
-        {
-            LimitReached = true;
-        }
-         if (LimitReached == true)
-        {
-            BottomPipe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
-
+       // if (BottomPipe.transform.position.y < OpeningLength)
+       // {
+         //   LimitReached = true;
+        //}
+        ///if (LimitReached == true)
+        //{
+           // BottomPipe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+       //}
        
     }
 
@@ -47,10 +46,7 @@ public class ButtonScript : MonoBehaviour
 
             BottomPipe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -10);
         }
-        else
-        {
-            BottomPipe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
+      
         
     }
 }
