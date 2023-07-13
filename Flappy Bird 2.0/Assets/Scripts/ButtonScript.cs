@@ -9,6 +9,12 @@ public class ButtonScript : MonoBehaviour
     public float OpeningLength;
 
     public bool LimitReached;
+
+    public float LowestPos;
+
+    public float HighestPos;
+
+    public float OpeningSpeed;
     
     // Start is called before the first frame update
     void Start()
@@ -19,21 +25,26 @@ public class ButtonScript : MonoBehaviour
 
         if (gameObject != null)
         {
-            transform.position = new Vector3(transform.position.x, Random.Range(BottomPipe.transform.position.y + 5, BottomPipe.transform.position.y + 8), transform.position.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, Random.Range(BottomPipe.transform.localPosition.y + LowestPos, BottomPipe.transform.localPosition.y + HighestPos), transform.localPosition.z);
         }    
     }
 
     // Update is called once per frame
     void Update()
     {
-       // if (BottomPipe.transform.position.y < OpeningLength)
-       // {
-         //   LimitReached = true;
-        //}
-        ///if (LimitReached == true)
-        //{
-           // BottomPipe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-       //}
+        if (BottomPipe.transform.localPosition.y < BottomPipe.transform.localPosition.y - OpeningLength)
+        {
+            LimitReached = true;
+        }
+
+        if (LimitReached == true)
+        {
+            BottomPipe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+        }
+       
+
+
+        
        
     }
 
@@ -42,9 +53,7 @@ public class ButtonScript : MonoBehaviour
     {
         if (collision.CompareTag("Projectile") && LimitReached == false)
         {
-            // BottomPipe.transform.position = new Vector3(BottomPipe.transform.position.x, BottomPipe.transform.position.y - OpeningLength, BottomPipe.transform.position.z);
-
-            BottomPipe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -10);
+            BottomPipe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, OpeningSpeed);
         }
       
         

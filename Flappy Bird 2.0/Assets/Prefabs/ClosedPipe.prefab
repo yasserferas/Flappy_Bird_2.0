@@ -600,5 +600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BottomPipe: {fileID: 6910236189838760730}
-  OpeningLength: -38
+  OpeningLength: 10
   LimitReached: 0
+  LowestPos: 31
+  HighestPos: 20
+  OpeningSpeed: -15

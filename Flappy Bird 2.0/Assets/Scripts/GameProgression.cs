@@ -64,7 +64,7 @@ public class GameProgression : MonoBehaviour
 
         if (timer >= 70 &&  bs != null)
         {
-            bs.OpeningLength = -37f;
+            bs.OpeningLength = 8;
         }
 
 
