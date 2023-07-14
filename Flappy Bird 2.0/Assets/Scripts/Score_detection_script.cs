@@ -10,11 +10,16 @@ public class Score_detection_script : MonoBehaviour
 
     private bool CanScore;
 
+     public int Ammo;
+
    
 
     // Start is called before the first frame update
     void Start()
     {
+
+        Ammo = 5;
+
         sm = GameObject.FindGameObjectWithTag("Logic manager").GetComponent<ScoreManager>();
 
         bs = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
@@ -38,6 +43,7 @@ public class Score_detection_script : MonoBehaviour
             sm.add_score(1);
             FindObjectOfType<AudioManager>().Play("Score");
             CanScore = false;
+            Ammo = Ammo + 1;
         }
     }
 

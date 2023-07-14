@@ -18,6 +18,8 @@ public class BirdScript : MonoBehaviour
 
     public PipeSpawnerScript pss;
 
+    public Score_detection_script sms;
+
     public GameObject Game_Over_Screen;
 
     private bool Death_Sound_Played;
@@ -26,9 +28,14 @@ public class BirdScript : MonoBehaviour
 
     private bool CanShoot;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
+
+        
+
         Bird_Is_Alive = true; 
 
         Death_Sound_Played = false;
@@ -39,6 +46,10 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+
+        
         if (Input.GetKeyDown(KeyCode.W) && Bird_Is_Alive == true || Input.GetKeyDown(KeyCode.UpArrow) && Bird_Is_Alive == true || Input.GetKeyDown(KeyCode.Space) && Bird_Is_Alive == true)
         {
             rb.velocity = new Vector2(0, Jump_Force);
@@ -83,9 +94,11 @@ public class BirdScript : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.E) && CanShoot == true)
+        if (Input.GetKeyDown(KeyCode.E) && CanShoot == true && sms.Ammo > 0)
         {
             Shoot();
+
+            sms.Ammo = sms.Ammo - 1;
         }
     }
     

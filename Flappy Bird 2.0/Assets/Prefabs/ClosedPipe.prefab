@@ -602,6 +602,6 @@ MonoBehaviour:
   BottomPipe: {fileID: 6910236189838760730}
   OpeningLength: 10
   LimitReached: 0
-  LowestPos: 31
+  LowestPos: 24
   HighestPos: 20
-  OpeningSpeed: -15
+  OpeningSpeed: -18
