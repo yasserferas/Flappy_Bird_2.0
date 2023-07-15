@@ -32,14 +32,14 @@ public class ButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BottomPipe.transform.localPosition.y < BottomPipe.transform.localPosition.y - OpeningLength)
+        if (BottomPipe.transform.localPosition.y < -38)
         {
             LimitReached = true;
         }
 
         if (LimitReached == true)
         {
-            BottomPipe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            BottomPipe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         }
        
 
