@@ -10,6 +10,8 @@ public class Score_detection_script : MonoBehaviour
 
     private bool CanScore;
 
+    
+
      public int Ammo;
 
    
@@ -18,7 +20,7 @@ public class Score_detection_script : MonoBehaviour
     void Start()
     {
 
-        Ammo = 5;
+   
 
         sm = GameObject.FindGameObjectWithTag("Logic manager").GetComponent<ScoreManager>();
 
@@ -35,6 +37,16 @@ public class Score_detection_script : MonoBehaviour
         {
             this.enabled = false;
         }
+
+
+        if (Input.GetKeyDown(KeyCode.E) && bs.CanShoot == true  && Ammo > 0)
+        {
+            bs.Shoot();
+
+            Ammo = Ammo - 1;
+
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
