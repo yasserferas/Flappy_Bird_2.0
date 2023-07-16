@@ -26,11 +26,14 @@ public class BirdScript : MonoBehaviour
 
     [HideInInspector] public bool CanShoot;
 
+    [HideInInspector] public int Ammo;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
+        Ammo = 1;
 
         Bird_Is_Alive = true; 
 
@@ -90,6 +93,8 @@ public class BirdScript : MonoBehaviour
    public void Shoot()
     {
         Instantiate(Egg, transform.position, Egg.transform.rotation);
+
+        Ammo = Ammo - 1;
     }
     
 
